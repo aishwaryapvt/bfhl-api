@@ -7,11 +7,17 @@ DOB = "01012003"
 EMAIL = "your_email@vitstudent.ac.in"
 ROLL_NUMBER = "YOURROLL123"
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        "message": "API is working ✅",
+        "info": "Use POST /bfhl with JSON { 'data': [...] }"
+    }), 200
+
 @app.route('/bfhl', methods=['POST'])
 def bfhl():
     try:
         data = request.json.get("data", [])
-        
         even_numbers, odd_numbers, alphabets, special_characters = [], [], [], []
         sum_numbers, concat_string = 0, ""
 
@@ -49,5 +55,3 @@ def bfhl():
         return jsonify(response), 200
     except Exception as e:
         return jsonify({"status": "error", "is_success": False, "error": str(e)}), 400
-
-
