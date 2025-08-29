@@ -2,10 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-FULL_NAME = "aishwarya_s"
-DOB = "01012003"
-EMAIL = "your_email@vitstudent.ac.in"
-ROLL_NUMBER = "YOURROLL123"
+FULL_NAME = "Aishwarya_s"
+DOB = "17092004"
+EMAIL = "aishwarya.s2022c@vitstudent.ac.in"
+ROLL_NUMBER = "22BCE3317"
 
 @app.route('/', methods=['GET'])
 def home():
