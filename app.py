@@ -14,6 +14,13 @@ def home():
         "info": "Use POST /bfhl with JSON { 'data': [...] }"
     }), 200
 
+@app.route('/bfhl', methods=['GET'])
+def bfhl_info():
+    return jsonify({
+        "message": "This route only supports POST",
+        "usage": "Send a POST request with JSON { 'data': [...] }"
+    }), 200
+
 @app.route('/bfhl', methods=['POST'])
 def bfhl():
     try:
