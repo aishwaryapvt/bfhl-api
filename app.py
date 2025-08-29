@@ -50,4 +50,4 @@ def bfhl():
     except Exception as e:
         return jsonify({"status": "error", "is_success": False, "error": str(e)}), 400
 
-app.run()
+
